@@ -53,6 +53,11 @@
 				"RMLUI_SVG_PLUGIN": true,
 				"RMLUI_LUA_BINDINGS": true
 			}
+		},
+		{
+			"name": "dev-all-vcpkg",
+			"inherits": "dev-all",
+			"toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
 		}
 	]
 }

@@ -2,6 +2,13 @@
 # https://github.com/mikke89/RmlUi/issues/198#issuecomment-1246957062
 cmake_minimum_required(VERSION 3.10...3.27)
 
+set(VCPKG_OVERLAY_PORTS "${CMAKE_CURRENT_LIST_DIR}/VcpkgPorts")
+
+include("CMake/VcpkgCheckFeatures.cmake")
+
+vcpkg_check_feature(RMLUI_LUA_BINDINGS "lua")
+vcpkg_check_feature(RMLUI_SVG_PLUGIN "svg")
+
 project("RmlUi"
 	VERSION "6.1"
 	DESCRIPTION "C++ user interface library based on the HTML and CSS standards"
